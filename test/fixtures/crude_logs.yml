@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  miner_id: 
+  devs: MyText
+  pools: MyText
+  summary: MyText
+  processed: false
+
+two:
+  miner_id: 
+  devs: MyText
+  pools: MyText
+  summary: MyText
+  processed: false

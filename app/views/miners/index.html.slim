@@ -1,0 +1,27 @@
+h3=t "my_miners"
+table
+  -@miners.each do |miner|
+    tr
+      td=link_to miner.name, miner_path(miner)
+      td=miner.host
+      td=miner.port
+      td=form_for miner do |f|
+        =f.check_box :active
+        =f.submit
+      td=button_to(t("delete"), miner_path(miner), method: :delete)
+  
+h3=t "add_miner"
+=form_for Miner.new do |f|
+  .host
+    =f.label :host
+    =f.text_field :host
+  .port
+    =f.label :port
+    =f.text_field :port
+  .active
+    =f.label :active
+    =f.check_box :active
+  .name
+    =f.label :name
+    =f.text_field :name
+  =f.submit

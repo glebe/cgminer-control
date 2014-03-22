@@ -1,0 +1,13 @@
+=@miner.name
+
+h2 Stats
+
+h3 Temperature
+h4 0
+=@miner.crude_logs.map{|l|YAML::load(l.devs)[0]['Temperature']}
+h4 1
+=@miner.crude_logs.map{|l|YAML::load(l.devs)[1]['Temperature']}
+h4 2
+=@miner.crude_logs.map{|l|YAML::load(l.devs)[2]['Temperature']}
+h4 3
+=@miner.crude_logs.map{|l|YAML::load(l.devs)[3]['Temperature']}
