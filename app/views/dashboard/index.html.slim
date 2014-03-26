@@ -1,26 +1,5 @@
-h2 Summary
-=@summary.body.inspect
-br
-=@summary.raw.inspect
+h1 Welcome to the app
 
-h2 Pools
-table
-  thead
-    tr
-      -@pools.body.first.keys.each do |key|
-        th =key
-    -@pools.body.each do |pool|
-      tr
-        -pool.values.each do |value|
-          td=value
-
-h2 Devs
-table
-  thead
-    tr
-      -@devs.body.first.keys.each do |key|
-        th =key
-    -@devs.body.each do |dev|
-      tr
-        -dev.values.each do |value|
-          td=value
+p 
+  'Create your miner 
+  =link_to "here", miners_path

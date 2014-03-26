@@ -1,13 +1,17 @@
 =@miner.name
 
 h2 Stats
+p Here is the most recent info breakdown by GPU
+/ todo: latest record
+/ command to cgminer
+/ autoreact on alerts (high temp)
+h3 
+  'Temperature (latest record
+  =@miner.crude_logs.last.created_at
+  ')
+-YAML::load(@miner.crude_logs.last.devs).each do |gpu|
+  h4=gpu['GPU']
+  =gpu['Temperature']
 
-h3 Temperature
-h4 0
-=@miner.crude_logs.map{|l|YAML::load(l.devs)[0]['Temperature']}
-h4 1
-=@miner.crude_logs.map{|l|YAML::load(l.devs)[1]['Temperature']}
-h4 2
-=@miner.crude_logs.map{|l|YAML::load(l.devs)[2]['Temperature']}
-h4 3
-=@miner.crude_logs.map{|l|YAML::load(l.devs)[3]['Temperature']}
+.update
+=link_to "Manual refresh", manual_update_miner_path(@miner)

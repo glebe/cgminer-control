@@ -54,6 +54,8 @@ Rubycg::Application.routes.draw do
   #     resources :products
   #   end
   
-  resources :miners
+  resources :miners do
+    get "manual_update", on: :member
+  end
   
 end

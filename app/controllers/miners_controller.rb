@@ -10,4 +10,8 @@ class MinersController <  InheritedResources::Base
   def permitted_params
     params.permit(:miner => [:host, :port, :name, :active]) 
   end
+
+  def manual_update
+    #run rake task for selected miner
+  end
 end
